@@ -1,5 +1,5 @@
 # Elm Quickstart
-*Elm*, *SASS*, *Gulp* (ES6), *Javscript* synchronized to Elm bootstrap.
+**Elm**, **SASS**, **Gulp** (ES6), **Javscript** synchronized to Elm bootstrap.
 
 ## What's in the Quickstart
 This project contains the *elm*, *npm* and *Gulp* configuration to start developing
@@ -35,8 +35,9 @@ You can find the code in `public/index.html`, the function is this one:
 
 ## Why the need to synchronize Javascript to Elm?
 When we where building [MaltaJS registration page](https://github.com/roedit/maltajs-elm)
- using Elm, we needed a quick  way to run the GoogleMap plugin without messing up with
- Elm code, being sure that the Elm app had already rendered its HTML.
+ using Elm, we needed a quick  way to run the [GoogleMap](https://developers.google.com/maps/)
+ plugin without messing up with Elm code, being sure that the Elm app had
+ already rendered its HTML.
  
 Since the external plugin doesn't need to exchange data with Elm, a Port looked
  too complex as a solution.
