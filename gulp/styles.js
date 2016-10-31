@@ -15,7 +15,7 @@ gulp.task('styles:sass', () =>
         .pipe(concat('styles.min.css'))
         .pipe(minify())
         .pipe(sourcemaps.write('./'))
-        .pipe(gulp.dest(config.public.sass))
+        .pipe(gulp.dest(config.public.css))
 );
 
 gulp.task('styles', ['styles:sass'], (cb) => cb());

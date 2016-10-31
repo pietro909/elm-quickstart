@@ -13,12 +13,13 @@ module.exports = {
     },
     public: {
         root: publicRoot,
-        sass: publicRoot + 'css/',
+        css: publicRoot + 'css/',
         js: publicRoot + 'js',
         fonts: publicRoot + 'fonts'
     },
     bootstrap: {
-        fonts: bootstrapRoot + 'fonts/*'
+        fonts: bootstrapRoot + 'dist/fonts/*',
+        css: bootstrapRoot + 'dist/css/*'
     },
     output: {
         elmApplicationName: 'app'
