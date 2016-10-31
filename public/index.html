@@ -15,20 +15,26 @@
 <script>
     var mountNode = document.getElementById('main');
 
-    // look at http://stackoverflow.com/questions/39687776/how-to-render-embedded-elm-module-synchronously/
-    var mo = new MutationObserver(function(mutationRecords, instance) {
-        // a trivial check
-        for (var i = 0; i < mutationRecords.length; i += 1) {
-            if (mutationRecords[i].addedNodes.length > 0) {
-                console.debug('Hello from the JS, Elm just started rendering!');
-                // stop observing, if not needed anymore
-                mo.disconnect();
+    if (typeof MutationObserver === 'function') {
+        // look at http://stackoverflow.com/questions/39687776/how-to-render-embedded-elm-module-synchronously/ for more informations
+        var mo = new MutationObserver(function(mutationRecords, instance) {
+            // a trivial check
+            for (var i = 0; i < mutationRecords.length; i += 1) {
+                if (mutationRecords[i].addedNodes.length > 0) {
+                    console.debug('Hello from the JS, Elm just started rendering!');
+                    // stop observing, if not needed anymore
+                    mo.disconnect();
+                }
             }
-        }
-    });
-    mo.observe(mountNode, { childList: true });
+        });
+        mo.observe(mountNode, { childList: true });
+    } else {
+        console.warning('MutationObserver is not available, skipping JS sync-bootstrap. Please use a modern browser http://caniuse.com/#feat=mutationobserver');
+    }
 
+    // start!
 	var myApp = Elm.Main.embed(mountNode);
+
 </script>
 </body>
 </html>
