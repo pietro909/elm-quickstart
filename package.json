@@ -4,6 +4,7 @@
   "description": "ready-to-go project with Elm, Gulp, SASS, and pre-configured tasks",
   "main": "index.js",
   "dependencies": {
+    "babel-register": "^6.18.0",
     "bootstrap": "^3.3.7",
     "elm": "0.17.0",
     "gulp": "^3.9.1",
