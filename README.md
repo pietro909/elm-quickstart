@@ -48,7 +48,11 @@ If you need to run a plugin like *GoogleMap* or a *jQuery plugin*, you can use t
 
 
 ## Instructions
-To get started in a matter of minutes, just type the following commands:
+
+Ensure you have installed:
+* Node >= 5
+* Npm >= 3
+* Gulp
 
 ```sh
 $ git clone git@github.com:pietro909/elm-quickstart.git

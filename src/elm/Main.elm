@@ -1,5 +1,4 @@
 import Html exposing (Html, text, div, section, h1, p, a, header, h2, h3)
-import Html.App as App
 import Html.Attributes exposing (href, class)
 
 
